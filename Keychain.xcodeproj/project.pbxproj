@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15789F024D192EA006ACA72 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15789EF24D192EA006ACA72 /* AuthenticationServices.framework */; };
+		F168220523A66DDF0044A50C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F168220423A66DDF0044A50C /* LocalAuthentication.framework */; };
+		F16FC76424D1620900D55425 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16FC76324D1620900D55425 /* K.swift */; };
 		F1BF174423377768002C9EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BF174323377768002C9EC5 /* AppDelegate.swift */; };
-		F1BF174623377768002C9EC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BF174523377768002C9EC5 /* SceneDelegate.swift */; };
 		F1BF174823377768002C9EC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BF174723377768002C9EC5 /* ViewController.swift */; };
 		F1BF174B23377768002C9EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BF174923377768002C9EC5 /* Main.storyboard */; };
 		F1BF174D23377769002C9EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BF174C23377769002C9EC5 /* Assets.xcassets */; };
@@ -16,14 +18,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F15789EF24D192EA006ACA72 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		F168220423A66DDF0044A50C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		F16FC76324D1620900D55425 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		F1BF174023377768002C9EC5 /* Keychain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keychain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BF174323377768002C9EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1BF174523377768002C9EC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1BF174723377768002C9EC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1BF174A23377768002C9EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1BF174C23377769002C9EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BF174F23377769002C9EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1BF175123377769002C9EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1BF175723377DCB002C9EC5 /* Keychain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Keychain.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15789F024D192EA006ACA72 /* AuthenticationServices.framework in Frameworks */,
+				F168220523A66DDF0044A50C /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F168220323A66DDF0044A50C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F15789EF24D192EA006ACA72 /* AuthenticationServices.framework */,
+				F168220423A66DDF0044A50C /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1BF173723377768002C9EC5 = {
 			isa = PBXGroup;
 			children = (
 				F1BF174223377768002C9EC5 /* Keychain */,
 				F1BF174123377768002C9EC5 /* Products */,
+				F168220323A66DDF0044A50C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +73,14 @@
 		F1BF174223377768002C9EC5 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
+				F1BF175723377DCB002C9EC5 /* Keychain.entitlements */,
 				F1BF174323377768002C9EC5 /* AppDelegate.swift */,
-				F1BF174523377768002C9EC5 /* SceneDelegate.swift */,
 				F1BF174723377768002C9EC5 /* ViewController.swift */,
 				F1BF174923377768002C9EC5 /* Main.storyboard */,
 				F1BF174C23377769002C9EC5 /* Assets.xcassets */,
 				F1BF174E23377769002C9EC5 /* LaunchScreen.storyboard */,
 				F1BF175123377769002C9EC5 /* Info.plist */,
+				F16FC76324D1620900D55425 /* K.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -138,9 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16FC76424D1620900D55425 /* K.swift in Sources */,
 				F1BF174823377768002C9EC5 /* ViewController.swift in Sources */,
 				F1BF174423377768002C9EC5 /* AppDelegate.swift in Sources */,
-				F1BF174623377768002C9EC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,9 +302,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Keychain/Keychain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G89S4GT3QW;
 				INFOPLIST_FILE = Keychain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +322,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Keychain/Keychain.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G89S4GT3QW;
 				INFOPLIST_FILE = Keychain/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
